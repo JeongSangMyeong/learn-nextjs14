@@ -1,6 +1,3 @@
-import { url } from "inspector";
-import { resolve } from "path";
-
 export const metadata = {
     title: "Home",
 };
@@ -9,7 +6,7 @@ const URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 
 async function getMovies() {
     console.log("im fetching!");
-    await new Promise((resolve) => setTimeout(resolve, 5000));
+    await new Promise((resolve) => setTimeout(resolve, 10000));
     const response = await fetch(URL);
     const json = await response.json();
 
