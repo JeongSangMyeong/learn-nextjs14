@@ -1,11 +1,11 @@
-import { url } from "../app/(home)/page";
+// import { API_URL } from "../app/(home)/page";
 import styles from "../styles/movie-videos.module.css";
 
 async function getVideos(id: string) {
     console.log(`Fetching movies: ${Date.now()}`)
     await new Promise((resolve) => setTimeout(resolve, 3000));
     // throw new Error('Something broke...');
-    const response = await fetch(`${url}/${id}/videos`);
+    const response = await fetch(`${process.env.API_URL}/${id}/videos`);
 
     return response.json();
 }
